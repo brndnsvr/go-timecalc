@@ -42,6 +42,14 @@ Install to `/usr/local/bin/timecalc`:
 make install-local
 ```
 
+On Apple Silicon Macs, `make install-local` defaults to `/opt/homebrew/bin`. On other systems it uses `/usr/local/bin` when available, otherwise `~/.local/bin`.
+
+Install to a specific location by overriding `BINDIR`:
+
+```sh
+make install-local BINDIR=/usr/local/bin
+```
+
 ## Input
 
 `timecalc` accepts zero-or-greater decimal hour values, such as `0`, `0.25`, `1`, or `1.5`.
