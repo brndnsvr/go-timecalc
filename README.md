@@ -36,7 +36,7 @@ Run tests:
 make test
 ```
 
-Install to `/usr/local/bin/timecalc`:
+Install using the platform default selected by the `Makefile`:
 
 ```sh
 make install-local
@@ -48,6 +48,28 @@ Install to a specific location by overriding `BINDIR`:
 
 ```sh
 make install-local BINDIR=/usr/local/bin
+```
+
+Other common destinations:
+
+```sh
+make install-local BINDIR=/opt/homebrew/bin
+```
+
+```sh
+make install-local BINDIR=$HOME/.local/bin
+```
+
+If `~/.local/bin` is already in your `PATH`, `timecalc` will be available as:
+
+```text
+~/.local/bin/timecalc
+```
+
+Writing to `/usr/local/bin` may require `sudo` on some Macs:
+
+```sh
+sudo make install-local BINDIR=/usr/local/bin
 ```
 
 ## Input
