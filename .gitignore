@@ -1,0 +1,9 @@
+timecalc
+*.test
+*.out
+coverage.txt
+
+.DS_Store
+.env
+.vscode/
+.idea/
